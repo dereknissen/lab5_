@@ -20,13 +20,13 @@ public class SimplePlayerMovement : MonoBehaviour
         if (Keyboard.current == null)
             return;
         if (Keyboard.current.wKey.isPressed || Keyboard.current.upArrowKey.isPressed)
-            moveDirection += Vector3.forward;
-        if (Keyboard.current.sKey.isPressed || Keyboard.current.downArrowKey.isPressed)
             moveDirection += Vector3.back;
+        if (Keyboard.current.sKey.isPressed || Keyboard.current.downArrowKey.isPressed)
+            moveDirection += Vector3.forward;
         if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed)
-            moveDirection += Vector3.left;
-        if (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed)
             moveDirection += Vector3.right;
+        if (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed)
+            moveDirection += Vector3.left;
         moveDirection = moveDirection.normalized;
     }
 
